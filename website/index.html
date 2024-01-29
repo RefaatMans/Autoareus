@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/images/icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+
+    <title>AutoAreUs</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      window.onload = function () {
+        window.scrollTo(0, 0);
+      };
+    </script>
+  </head>
+
+  <body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- start of floating btn -->
+    <button id="scrollToTopBtn" title="Go to Top">
+      <i class="bi bi-arrow-up-short" style="font-size: 20px"></i>
+    </button>
+
+    <!-- end of floating btn -->
+
+    <!-- testing -->
+
+    <header class="myheader" id="myheader">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="main-nav">
+              <h1 class="logo">
+                <a href="index.html">
+                  <img src="./assets/images/logo auto r us.png" width="200" />
+                </a>
+              </h1>
+              <ul class="nav">
+                <hr />
+                <li><a href="#contactUs" class="contact-link">Contact</a></li>
+                <hr />
+                <li>
+                  <a
+                    href="tel:+123456789"
+                    class="d-flex justify-content-center align-items-center"
+                  >
+                    <i class="bi bi-phone"></i> 623-400-3989
+                  </a>
+                </li>
+                <hr />
+              </ul>
+              <a class="menu-trigger">
+                <span id="menuIcon"><i class="bi bi-list"></i></span>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var menuTrigger = document.querySelector(".menu-trigger");
+        var navList = document.querySelector(".nav");
+        menuTrigger.addEventListener("click", function () {
+          navList.classList.toggle("show");
+        });
+      });
+    </script>
+    <script>
+      window.addEventListener("scroll", function () {
+        var header = document.getElementById("myheader");
+        if (window.scrollY > 300) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+    </script>
+    <div class="d-flex justify-content-center">
+      <!-- <video
+        id="myVideo"
+        src="./assets/images/Car Video new cropped.mp4"
+        style="width: 100%"
+        muted
+        autoplay
+        loop
+      ></video> -->
+      <img
+        id="myGif"
+        src="./assets/images/carGif.gif"
+        style="width: 100%"
+        alt="Your Alternative Text"
+      />
+    </div>
+    <div
+      class="d-flex flex-column flex-lg-row justify-content-around align-items-sm-start pt-3"
+      style="background-color: #232d39"
+    >
+      <div class="mymain-banner" id="top">
+        <div class="caption" style="background-color: #232d39">
+          <div class="header-img">
+            <h2 class="mb-5 pt-2 mt-sm-0" style="padding-right: 10px">
+              We <em>pay</em> the most <br />
+              <em>Cash</em> within the hour <br />
+              <em>Fast</em> and <em>super</em> friendly
+            </h2>
+
+            <!-- <img
+            src="assets/images/header-img.svg"
+            width="350"
+            height="350"
+            alt=""
+            style="margin-top: 7rem"
+            id="header-img"
+          /> -->
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <button class="main-button" style="border-radius: 10px">
+          <a
+            href="tel:+123456789"
+            class="d-flex justify-content-center align-items-center"
+            style="color: white"
+          >
+            <i
+              class="bi bi-phone"
+              style="font-size: 25px; padding-right: 5px"
+            ></i>
+            623-400-3989
+          </a></button
+        ><br />
+        <button
+          onclick="openForm()"
+          id="submitForm"
+          style="border-radius: 10px; margin-bottom: 10px"
+          class="main-button"
+        >
+          <a
+            ><i
+              class="bi bi-envelope-paper"
+              style="font-size: 25px; padding-right: 5px"
+            ></i
+            >Submit a Form</a
+          >
+        </button>
+      </div>
+      <br /><br />
+      <div class="ps-4 pe-4" style="padding-bottom: 0px !important">
+        <div
+          class="carsFormDiv d-flex justify-content-between align-items-center flex-column"
+        >
+          <div
+            class="d-flex carsForm align-items-center"
+            style="background-color: #232d39; gap: 0.5rem"
+          >
+            <div class="contact-form">
+              <div class="d-flex flex-column">
+                <h4
+                  class="d-none"
+                  id="confirmationMsg"
+                  style="color: red; text-align: center"
+                ></h4>
+                <!-- this is for client info  d-sm-block-->
+                <div id="clientInfo" class="d-none">
+                  <div class="text-center" style="gap: 10px">
+                    <input
+                      name="name"
+                      type="text"
+                      id="cuName"
+                      placeholder="Name*"
+                      required=""
+                    />
+                    <input
+                      name="Phone"
+                      type="number"
+                      id="cuPhone"
+                      placeholder="Enter phone number"
+                      onblur="validatePhone()"
+                      required
+                    />
+                  </div>
+                  <div class="text-center" style="gap: 10px">
+                    <input
+                      name="Email"
+                      type="email"
+                      id="cuEmail"
+                      onblur="validateEmail()"
+                      placeholder="Your Email (Optional)"
+                      required=""
+                    />
+                    <input
+                      name="Zipcode"
+                      type="number"
+                      id="cuZipcode"
+                      placeholder="Zipcode*"
+                      required=""
+                      onblur="validateZipcode()"
+                    />
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset class="text-center mb-3">
+                      <button
+                        id="form-submit"
+                        onclick="carInfo()"
+                        class="main-button"
+                      >
+                        Next - My Vehicle Information
+                      </button>
+                    </fieldset>
+                  </div>
+                </div>
+                <!-- end of client info -->
+
+                <!-- start of carInfo -->
+                <div id="carInfo" class="cuCarInfo d-none">
+                  <div class="">
+                    <button
+                      onclick="openDropDown(4)"
+                      class="form-control cuCarsSelect"
+                    >
+                      <div class="d-flex justify-content-between">
+                        <p style="font-size: 20px" id="yearText2">Year</p>
+                        <i class="bi bi-caret-down" style="font-size: 20px"></i>
+                      </div>
+                    </button>
+                    <div id="myDropdown4" class="dropdown-content">
+                      <input
+                        type="text"
+                        placeholder=""
+                        id="myInput4"
+                        class="myInput"
+                        onkeyup="filterFunction(4)"
+                      />
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <button
+                      onclick="openDropDown(5)"
+                      class="form-control cuCarsSelect"
+                    >
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <p style="font-size: 20px" id="makeText2">Make</p>
+                        <i class="bi bi-caret-down" style="font-size: 20px"></i>
+                      </div>
+                    </button>
+                    <div id="myDropdown5" class="dropdown-content">
+                      <input
+                        type="text"
+                        placeholder=""
+                        id="myInput5"
+                        class="myInput"
+                        onkeyup="filterFunction(5)"
+                      />
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <button
+                      onclick="openDropDown(6)"
+                      class="form-control cuCarsSelect"
+                    >
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <p style="font-size: 20px" id="modelText2">Model</p>
+                        <i class="bi bi-caret-down" style="font-size: 20px"></i>
+                      </div>
+                    </button>
+                    <div id="myDropdown6" class="dropdown-content">
+                      <input
+                        type="text"
+                        placeholder=""
+                        id="myInput6"
+                        class="myInput"
+                        onkeyup="filterFunction(6)"
+                      />
+                    </div>
+                  </div>
+                  <input
+                    name="Milage"
+                    type="text"
+                    id="cuMilage"
+                    style="border-radius: 10px; margin-top: 0px"
+                    placeholder="Milage (Optional)"
+                    required
+                  />
+                  <div class="col-lg-12">
+                    <fieldset class="text-center mb-3">
+                      <button
+                        id="form-submit"
+                        onclick="carCondition(event)"
+                        class="main-button"
+                      >
+                        Next - Vehicle Condition
+                      </button>
+                    </fieldset>
+                  </div>
+                </div>
+                <br /><br /><br />
+                <!-- end of carInfo -->
+
+                <!-- start of carCondition -->
+                <div id="carCondition" class="cucarCondition d-none">
+                  <select name="" id="cuTitleSelect" class="cuSelect">
+                    <option value="">Title Type</option>
+                    <option value="I have a clean title">
+                      I have a clean title
+                    </option>
+                    <option value="I have a salvaged title">
+                      I have a salvaged title
+                    </option>
+                    <option value="I have an out of state title">
+                      I have an out of state title
+                    </option>
+                    <option value="I don't have title">
+                      I don't have title
+                    </option>
+                  </select>
+                  <select name="" id="cuDrivableSelect" class="cuSelect">
+                    <option value="">Drivable</option>
+                    <option value="Starts and Drives">Starts and Drives</option>
+                    <option value="Starts but does not Drive">
+                      Starts but does not Drive
+                    </option>
+                    <option value="Does not drive">Does not drive</option>
+                  </select>
+                  <select name="" id="cuConditionSelect" class="cuSelect">
+                    <option value="">Condition</option>
+                    <option value="Good">Good</option>
+                    <option value="Average">Average</option>
+                    <option value="Poor">Poor</option>
+                  </select>
+                  <div class="col-lg-12" id="sendBtnDiv">
+                    <fieldset class="text-center mb-3">
+                      <button
+                        id="form-submit"
+                        onclick="sendForm()"
+                        class="main-button"
+                      >
+                        Get An Offer
+                      </button>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- testinggg -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- testing -->
+
+    <!-- ***** Cars Starts ***** -->
+    <section class="section" id="trainers">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3 mt-5">
+            <div class="section-heading">
+              <h2>WHY <em>CHOOSE</em> US</h2>
+              <img src="assets/images/line-dec.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="trainer-item">
+              <div class="image-thumb">
+                <img src="assets/images/cashcars.png" alt="" />
+              </div>
+              <div class="down-content text-center">
+                <h4 class="mt-3">GET AN INSTANT QUOTE</h4>
+
+                <p>
+                  You Can Either Submit Your Information Through Our Online
+                  Form, Text Us, Or Call Us To Get A Free Quote So You Can Sell
+                  Your Car For Cash Today.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="trainer-item">
+              <div class="image-thumb">
+                <img src="assets/images/whyUs.png" alt="" />
+              </div>
+              <div class="down-content text-center">
+                <h4 class="mt-3">WHY CHOOSE AUTOAREUS?</h4>
+
+                <p>
+                  We offer the best possible prices for your used car, thanks to
+                  our lower overhead costs. Uncover Unexpected Value: We'll
+                  Surprise You with Top Dollar for Your Damaged Car.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="trainer-item">
+              <div class="image-thumb">
+                <img src="assets/images/plates.png" alt="" />
+              </div>
+              <div class="down-content text-center">
+                <h4 class="mt-3">CERTIFIED, SECURE, AND COVERED</h4>
+
+                <p>
+                  Your peace of mind is our priority, We are fully linced,
+                  bonded, and insured company, ensuring you're protected
+                  throughout the process.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ***** Cars Ends ***** -->
+
+    <section
+      class="section section-bg"
+      id="schedule"
+      style="
+        background-image: url(assets/images/about-fullscreen-1-1920x700.jpg);
+      "
+    >
+      <div class="containerQ">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3">
+            <div class="section-heading dark-bg">
+              <h2><em>Frequently</em> asked Questions</h2>
+              <img src="assets/images/line-dec.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <style>
+          ul li {
+            list-style: none;
+          }
+        </style>
+        <section>
+          <div class="container" data-aos="fade-up">
+            <div class="section-title">
+              <div
+                class="d-flex featuresDiv flex-grow-1 flex-column justify-content-start align-content-start text-start"
+              >
+                <div>
+                  <div>
+                    <div
+                      onclick="details(1)"
+                      class="d-flex justify-content-start gap-3 align-items-center"
+                    >
+                      <i
+                        class="bi bi-plus-square-fill"
+                        id="ditailsIcon1"
+                        style="font-size: 40px"
+                      ></i>
+                      <p class="m-2 questionsP">WHAT IS <em>AUTOAREUS</em></p>
+                    </div>
+                    <div class="d-none" id="details1">
+                      <div
+                        class="modulesItems justify-content-center align-items-center"
+                      >
+                        <div style="padding: 1.5rem; flex: 1">
+                          AutoAreUs is the fast way to sell your used car
+                          online. With just the tap of a button, a qualified
+                          evaluator will come to your location within 1 hour
+                          with a cash offer . Save yourself the hassle of
+                          selling the car yourself, and make more money from the
+                          comfort of your own living room.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="p-0 m-0" />
+                <div>
+                  <div>
+                    <div
+                      onclick="details(2)"
+                      class="d-flex justify-content-start gap-3 align-items-center"
+                    >
+                      <i
+                        class="bi bi-plus-square-fill"
+                        id="ditailsIcon2"
+                        style="font-size: 40px"
+                      ></i>
+                      <p class="m-2 questionsP">
+                        HOW DO YOU VALUE MY CAR? HOW MUCH DO YOU PAY?
+                      </p>
+                    </div>
+                    <div class="d-none" id="details2">
+                      <div
+                        class="modulesItems justify-content-center align-items-center"
+                      >
+                        <div style="padding: 1.5rem">
+                          We have a proprietary database that we use to
+                          determine our pricing. We consider the condition,
+                          title status, location, and other information when
+                          valuing your car. We can give a price quote
+                          immediately on our online price quote form here or
+                          give us a call here at 1 623-400-3989 and we will give
+                          you a quote over the phone.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="p-0 m-0" />
+
+                <div>
+                  <div>
+                    <div
+                      onclick="details(3)"
+                      class="d-flex justify-content-start gap-3 align-items-center"
+                    >
+                      <i
+                        class="bi bi-plus-square-fill"
+                        id="ditailsIcon3"
+                        style="font-size: 40px"
+                      ></i>
+                      <p class="m-2 questionsP">
+                        HOW AND WHEN DO I GET PAYED FOR MY CAR?
+                      </p>
+                    </div>
+                    <div class="d-none" id="details3">
+                      <div
+                        class="modulesItems justify-content-start align-items-center"
+                      >
+                        <div style="padding: 1.5rem">
+                          You'll get paid on the spot the day of pick-up. Our
+                          carrier will inspect the vehicle and title, grab the
+                          keys, and hand over your cash!
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <script>
+          let x = [0, 0, 0, 0];
+
+          const details = (id) => {
+            const detailsElement = document.getElementById(`details${id}`);
+            const icon = document.getElementById(`ditailsIcon${id}`);
+
+            // Close all other sections
+            for (let i = 1; i <= x.length; i++) {
+              if (i !== id && x[i - 1] === 1) {
+                const otherDetailsElement = document.getElementById(
+                  `details${i}`
+                );
+                const otherIcon = document.getElementById(`ditailsIcon${i}`);
+
+                otherIcon.classList.remove("bi-dash-square-fill");
+                otherIcon.classList.add("bi-plus-square-fill");
+                otherDetailsElement.classList.toggle("fade-in", false);
+                otherDetailsElement.classList.toggle("d-none", true);
+                x[i - 1] = 0;
+              }
+            }
+
+            // Toggle the clicked section
+            if (x[id - 1] === 0) {
+              icon.classList.add("bi-dash-square-fill");
+              icon.classList.remove("bi-plus-square-fill");
+              detailsElement.classList.toggle("d-none", false);
+              detailsElement.classList.toggle("fade-in", true);
+              x[id - 1] = 1;
+            } else {
+              icon.classList.remove("bi-dash-square-fill");
+              icon.classList.add("bi-plus-square-fill");
+              detailsElement.classList.toggle("fade-in", false);
+              detailsElement.classList.toggle("d-none", true);
+              x[id - 1] = 0;
+            }
+          };
+        </script>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-6 offset-lg-3">
+            <div class="section-heading">
+              <h2>contact <em> info</em></h2>
+              <img src="assets/images/line-dec.png" alt="waves" />
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column flex-md-row">
+          <div class="col-md-3">
+            <div class="icon">
+              <i class="fa fa-phone"></i>
+            </div>
+
+            <h5>
+              <a href="tel:+123456789" class="d-flex justify-content-center"
+                >623-400-3989</a
+              >
+            </h5>
+
+            <br />
+          </div>
+
+          <div class="col-md-3">
+            <div class="icon">
+              <i class="bi bi-clock"></i>
+            </div>
+
+            <h5 style="color: #ed563b; text-align: center">
+              Monday — Saturday 7:00am — 7:00pm
+            </h5>
+
+            <br />
+          </div>
+          <div class="col-md-3">
+            <div class="icon">
+              <i class="fa fa-envelope"></i>
+            </div>
+
+            <h5>
+              <a
+                href="mailto:info@autoareus.com"
+                class="d-flex justify-content-center"
+                >info@autoareus.com</a
+              >
+            </h5>
+
+            <br />
+          </div>
+
+          <div class="col-md-3">
+            <div class="icon">
+              <i class="fa fa-map-marker"></i>
+            </div>
+
+            <h5 style="color: #ed563b; text-align: center">
+              San Diego, CA <br />Los Angeles, CA <br />Phoenix, AZ
+            </h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** Call to Action Start ***** -->
+    <section
+      class="section section-bg1"
+      id="contactUs"
+      style="background-image: url(assets/images/banner-image-1-1920x500.jpg)"
+    >
+      <div class="container mb-0">
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+            <div class="cta-content">
+              <div class="section-heading">
+                <h2>Send Us a <em>Message</em></h2>
+              </div>
+              <h4
+                style="color: #ff3613; text-align: center"
+                class="d-none"
+                id="confirm"
+              >
+                Thank you! We will contact you soon.
+              </h4>
+              <div class="contact-form">
+                <form id="contact" action="" method="post">
+                  <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                      <fieldset>
+                        <input
+                          name="name"
+                          type="text"
+                          id="Name"
+                          placeholder="Your Name*"
+                          required=""
+                        />
+                      </fieldset>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                      <fieldset>
+                        <input
+                          name="email"
+                          type="text"
+                          id="Email"
+                          pattern="[^ @]*@[^ @]*"
+                          placeholder="Your Email*"
+                          required
+                        />
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                      <fieldset>
+                        <input
+                          name="subject"
+                          type="text"
+                          id="Subject"
+                          placeholder="Subject*"
+                          required
+                        />
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <textarea
+                          name="message"
+                          rows="6"
+                          id="Message"
+                          placeholder="Message*"
+                          required=""
+                        ></textarea>
+                      </fieldset>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-lg-12">
+                <fieldset class="text-center mb-3">
+                  <button
+                    id="form-submit"
+                    onclick="sendMessage()"
+                    class="main-button"
+                  >
+                    Send Message
+                  </button>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ***** Call to Action End ***** -->
+
+    <!-- ***** Footer Start ***** -->
+
+    <footer style="background-color: rgb(218, 217, 217)">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <p id="footerText"></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      let footerYear = new Date().getFullYear();
+      document.getElementById("footerText").innerHTML = `
+          Copyright © ${footerYear} AutoAreUs - by
+                <a href="http://dynasoft.technology/" target="_blank">Dynasoft Technology</a>
+          `;
+      // function playVideo() {
+      //   var video = document.getElementById("myVideo");
+      //   video.play();
+      // }
+    </script>
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <!-- <script src="assets/js/waypoints.min.js"></script> -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script>
+    <script src="assets/js/mixitup.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/dropdown.js"></script>
+    <script src="assets/js/sendServices.js"></script>
+
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>
